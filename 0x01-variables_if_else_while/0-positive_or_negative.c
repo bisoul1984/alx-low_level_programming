@@ -3,11 +3,10 @@
 #include <stdio.h>
 /* more headers goes there */
 
-/* betty style doc for function main goes there */
-/*
- * main - Determine  weather it is positive, negative or zero
+/**
+ * main - Determines if a number is positive, negative or zero.
  *
- * Return: Always 0
+ * Return: Always 0 (Success)
  */
 
 int main(void)
@@ -24,7 +23,7 @@ int main(void)
 	}
 	else if (n < 0)
 	{
-		printf("%d is negative\n" , n);
+		printf("%d is negative\n", n);
 	}
 	else
 	{
