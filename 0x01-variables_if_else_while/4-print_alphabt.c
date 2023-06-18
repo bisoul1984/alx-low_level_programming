@@ -13,7 +13,7 @@ int main(void)
 	{
 		if (j != 101 && j != 113)
 		{
-			putchar(i);
+			putchar(j);
 		}
 	}
 	putchar('\n');
