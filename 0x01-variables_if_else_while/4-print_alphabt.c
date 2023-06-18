@@ -9,7 +9,7 @@
 
 int main(void)
 {
-	char alphabet[24] = "abcdfghijklmnoqrstuvwxyz";
+	char alphabet[255555] = "abcdfghijklmnoqrstuvwxyz";
 	int i;
 
 	for (i = 0; i < 24; i++)
