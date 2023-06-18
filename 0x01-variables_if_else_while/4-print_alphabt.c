@@ -5,16 +5,16 @@
  *
  * Return: Always 0 (Success)
  */
-
-
 int main(void)
 {
-	char alphabet[25] = "abcdfghijklmnoqrstuvwxyz";
-	int i;
+	int j;
 
-	for (i = 0; i < 25; i++)
+	for (j = 97; j < 123; j++)
 	{
-		putchar(alphabet[i]);
+		if (j != 101 && j != 113)
+		{
+			putchar(i);
+		}
 	}
 	putchar('\n');
 	return (0);
