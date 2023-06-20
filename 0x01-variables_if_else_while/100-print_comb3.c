@@ -16,7 +16,7 @@ int main(void)
 			if (t > i)
 			{
 				putchar(i);
-				putchat(t);
+				putchar(t);
 				if (i != 56 || t != 57)
 				{
 					putchar(',');
