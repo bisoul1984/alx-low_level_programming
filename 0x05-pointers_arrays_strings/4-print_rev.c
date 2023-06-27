@@ -12,7 +12,7 @@ void print_rev(char *s)
 	while (*s != '\0')
 	{
 		sum++;
-		*s++;
+		s++;
 	}
 
 	for (i = sum; i > 0; i--)
