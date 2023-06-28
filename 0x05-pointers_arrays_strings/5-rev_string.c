@@ -5,27 +5,20 @@
  * @s: string
  * Return: string in reverse order
  */
-void puts2(char *str)
+void rev_string(char *s)
 {
+	char rev = s{0};
 	int sum = 0;
-	int x = 0;
-	int *t = str;
-	int y;
+	int x;
 
-	while (*t != '\0')
+	while (s[sum] != '\0')
+	counter++;
+	for (x = 0; x < sum; x++)
 	{
-		t++;
-		sum++;
+		sum--;
+		rev = s[x];
+		s[x] = s[sum];
+		s[sum] = rev;
 	}
-	x = sum - 1;
-
-	for (y = 0; y <= x; y++)
-	{
-		if (y % 2 == 0)
-		{
-			_putchar(str[0]);
-		}
-	}
-	_putchar('\n');
 }
 
