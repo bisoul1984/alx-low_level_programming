@@ -5,7 +5,7 @@
  * @s: string
  * Return: string in reverse order
  */
-void rev_string(char *s)
+void puts2(char *str)
 {
 	int sum = 0;
 	int x = 0;

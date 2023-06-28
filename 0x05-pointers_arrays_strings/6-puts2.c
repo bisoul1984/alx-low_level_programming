@@ -1,15 +1,15 @@
 #include "main.h"
 
 /**
- * rev_string - reverse a string
- * @s: string
- * Return: string in reverse order
+ * puts2 - reverse a string
+ * @str: string
+ * Return: prints every other character of a string
  */
-void rev_string(char *s)
+void puts2(char *str)
 {
 	int sum = 0;
 	int x = 0;
-	int *t = s;
+	int *t = str;
 	int y;
 
 	while (*t != '\0')
@@ -23,7 +23,7 @@ void rev_string(char *s)
 	{
 		if (y % 2 == 0)
 		{
-			_putchar(s[0]);
+			_putchar(str[0]);
 		}
 	}
 	_putchar('\n');
