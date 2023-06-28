@@ -9,7 +9,7 @@ void rev_string(char *s)
 {
 	int sum = 0;
 	int x = 0;
-	int *t = str;
+	int *t = s;
 	int y;
 
 	while (*t != '\0')
@@ -23,7 +23,7 @@ void rev_string(char *s)
 	{
 		if (y % 2 == 0)
 		{
-			_putchar(str[0]);
+			_putchar(s[0]);
 		}
 	}
 	_putchar('\n');
