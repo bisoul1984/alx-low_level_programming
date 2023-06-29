@@ -6,9 +6,9 @@
  *
  * Return: Always 0.
  */
-int _isdigit(int h)
+int _isdigit(int c)
 {
-	if (h >= '0' && h <= '9')
+	if (c >= '0' && c <= '9')
 	{
 		return (1);
 	}
