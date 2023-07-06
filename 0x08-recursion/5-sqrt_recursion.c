@@ -34,7 +34,7 @@ int actual_sqrt(int n, int x)
 	}
 	if (x * x == n)
 	{
-		return (i);
+		return (x);
 	}
 	return (actual_sqrt(n, x + 1));
 }
