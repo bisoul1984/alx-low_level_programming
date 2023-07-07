@@ -1,0 +1,21 @@
+#include "main.h"
+#include <stddef.h>
+
+/**
+ * _strchr - entery point
+ * @s: input
+ * @c: input
+ * Return: Always 0
+ */
+
+char *_strchr(chr *s, chr c)
+{
+	int x = 0;
+
+	for (; s[x] >= '\0'; x++)
+	{
+		if (s[x] == c)
+			return (&s[x]);
+	}
+	return (0);
+}
