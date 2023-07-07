@@ -1,6 +1,6 @@
 #include "main.h"
 
-int check_aplindro(char *s, int x, int len);
+int check_plindro(char *s, int x, int len);
 int _strlen_recursion(char *s);
 
 /**
