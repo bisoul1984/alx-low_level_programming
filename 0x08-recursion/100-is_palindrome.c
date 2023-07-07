@@ -1,6 +1,6 @@
 #include "main.h"
 
-int check_aplindrome(char *s, int x, int len);
+int check_aplindro(char *s, int x, int len);
 int _strlen_recursion(char *s);
 
 /**
@@ -36,7 +36,7 @@ int _strlen_recursion(char *s)
 }
 
 /**
- * check_palindrome - check characters recursively
+ * check_palindro - check characters recursively
  * @s: string to be checked
  * @x: iterator
  * @len: length of string
@@ -44,7 +44,7 @@ int _strlen_recursion(char *s)
  * Return: 1 if palindrom is true or 0 if not
  */
 
-int check_palindrome(char *s, int x, int len)
+int check_palindro(char *s, int x, int len)
 {
 	if (*(s + x) != *(s + len - 1))
 	{
@@ -54,5 +54,5 @@ int check_palindrome(char *s, int x, int len)
 	{
 		return (1);
 	}
-	return (check_palindrome(s, x + 1, len - 1));
+	return (check_palindro(s, x + 1, len - 1));
 }
