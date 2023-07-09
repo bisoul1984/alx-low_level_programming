@@ -8,7 +8,7 @@
  * Return: Always 0
  */
 
-char *_strchr(chr *s, chr c)
+char *_strchr(char *s, char c)
 {
 	int x = 0;
 
