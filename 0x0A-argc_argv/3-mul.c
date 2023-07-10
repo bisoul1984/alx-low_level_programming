@@ -1,8 +1,8 @@
-#include <stdio.h>
+
 
 
 /**
- * _atoi - convert string to an integer
+ *  - convert string to an integer
  * @s: string to be converted
  *
  * Return: int converted from string
