@@ -4,13 +4,13 @@
 #define ERR_MSG "Error"
 
 /**
- * digit - check if string contain non-digit character
+ * is_digit - check if string contain non-digit character
  * @s: string to be evaluated
  *
  * Return: 0 if non digit is found or 1
  */
 
-int digit(char *s)
+int is_digit(char *s)
 {
 	int x = 0;
 
@@ -23,13 +23,13 @@ int digit(char *s)
 	return (1);
 }
 /**
- * strlen - return length of string
+ * _strlen - return length of string
  * @s: string to be evaluated
  *
  * Return: length of string
  */
 
-int strlen(char *s)
+int _strlen(char *s)
 {
 	int x = 0;
 
