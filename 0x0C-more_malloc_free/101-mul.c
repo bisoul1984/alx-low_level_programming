@@ -1,44 +1,49 @@
-
+#include "main.h"
+#include <stdlib>
+#include <stdio.h>
+#define ERR_MSG "Error"
 
 /**
- * is_digit - checks if a string contains a non-digit char
+ * digit - check if string contain non-digit character
  * @s: string to be evaluated
  *
- * Return: 0 if a non-digit is found, 1 otherwise
+ * Return: 0 if non digit is found or 1
  */
-int is_digit(char *s)
-{
-	int i = 0;
 
-	while (s[i])
+int digit(char *s)
+{
+	int x = 0;
+
+	while (s[x])
 	{
-		if (s[i] < '0' || s[i] > '9')
-			return (0);
+		if (s[x] < '0' || s[x] > '9')
+			return ('0');
 		i++;
 	}
 	return (1);
 }
-
 /**
- * _strlen - returns the length of a string
- * @s: string to evaluate
+ * strlen - return length of string
+ * @s: string to be evaluated
  *
- * Return: the length of the string
+ * Return: length of string
  */
-int _strlen(char *s)
-{
-	int i = 0;
 
-	while (s[i] != '\0')
+int strlen(char *s)
+{
+	int x = 0;
+
+	while (s[x] != '\0')
 	{
-		i++;
+		x++;
 	}
-	return (i);
+	return (x);
 }
 
 /**
- * errors - handles errors for main
+ * errors - handles error for main
  */
+
 void errors(void)
 {
 	printf("Error\n");
@@ -46,53 +51,53 @@ void errors(void)
 }
 
 /**
- * main - multiplies two positive numbers
+ * main - multiply two positive numbers
  * @argc: number of arguments
  * @argv: array of arguments
  *
- * Return: always 0 (Success)
+ * Return: always 0
  */
+
 int main(int argc, char *argv[])
 {
 	char *s1, *s2;
-	int len1, len2, len, i, carry, digit1, digit2, *result, a = 0;
+	int len1, len2, len, x, sum, digit1, digit2, *resu, t = 0;
 
 	s1 = argv[1], s2 = argv[2];
-	if (argc != 3 || !is_digit(s1) || !is_digit(s2))
+	if (argc != 3 || !digit(s1) || !digit(s2))
 		errors();
-	len1 = _strlen(s1);
-	len2 = _strlen(s2);
+	len1 = strlen(s1);
+	len2 = strlen(s2);
 	len = len1 + len2 + 1;
-	result = malloc(sizeof(int) * len);
-	if (!result)
+	resu = malloc(sizeof(int) * len);
+	if (!resu)
 		return (1);
-	for (i = 0; i <= len1 + len2; i++)
-		result[i] = 0;
+	for (x = 0; x <= len1 + len2; x++)
+		resu[x] = 0;
 	for (len1 = len1 - 1; len1 >= 0; len1--)
 	{
 		digit1 = s1[len1] - '0';
-		carry = 0;
-		for (len2 = _strlen(s2) - 1; len2 >= 0; len2--)
+		sum = 0;
+		for (len2 = strlen(s2) - 1; len2 >= 0; len2--)
 		{
 			digit2 = s2[len2] - '0';
-			carry += result[len1 + len2 + 1] + (digit1 * digit2);
-			result[len1 + len2 + 1] = carry % 10;
-			carry /= 10;
+			sum += resu[len1 + len2 + 1] + (digit1 * digit2);
+			resu[len1 + len2 + 1] = sum % 10;
+			sum /= 10;
 		}
-		if (carry > 0)
-			result[len1 + len2 + 1] += carry;
+		if (sum > 0)
+			resu[len1 + len2 + 1] += sum;
 	}
-	for (i = 0; i < len - 1; i++)
+		for (x = 0; x < len - 1; x++)
 	{
-		if (result[i])
-			a = 1;
-		if (a)
-			_putchar(result[i] + '0');
+			if (resu[x])
+				t = 1;
+			if (t)
+				_putchar(resu[x] + '0');
 	}
-	if (!a)
-		_putchar('0');
-	_putchar('\n');
-	free(result);
-	return (0);
+			if (!t)
+				_putchar('0');
+			_putchar('\n');
+			free(resu);
+			return (0);
 }
-
