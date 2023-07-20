@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(2);
 	}
-	arr = (char *)main;
+	arr = (char*)main;
 
 	for (x = 0; x < bit; x++)
 	{
@@ -35,6 +35,7 @@ int main(int argc, char *argv[])
 			printf("%02hhx\n", arr[x]);
 			break;
 		}
-		printf("%02hhx ", arr[x]);
+		printf("%02hhx", arr[x]);
 	}
+	return (0);
 }
