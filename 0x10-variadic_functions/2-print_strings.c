@@ -1,50 +1,36 @@
 #include "variadic_functions.h"
-#include <stdarg.h>
 #include <stdio.h>
+#include <stdarg.h>
 
 /**
- * print_all - print anything
- * @format: types of arguments passed
+ * print_strings - print string
+ *@separator: string to be printed
+ *@n: number of string pased
+ *@...: number of string to be printed
+ *Description: if separator is NULL it is not printed
  */
 
-void print_all(const char * const format, ...)
+void print_strings(const char *separator, const unsigned int n, ...)
 {
-	int x = 0;
-	char *y, *z = "";
+	va_list string;
+	char *str;
+	unsigned int x;
 
-	va_list t;
+	va_start(string, n);
 
-	va_start(t, format);
-
-	if (format)
+	for (x = 0; x < n; x++)
 	{
-		while (format[x])
-		{
-			switch (format[x])
-			{
-				case 'c':
-					printf("%s%c", z, va_arg(t, int));
-					break;
-				case 'i':
-					printf("%s%d", z, va_arg(t, int));
-					break;
-				case 'f':
-					printf("%s%f", z, va_arg(t, double));
-					break;
-				case 's':
-					y = va_arg(t, char *);
-					if (!y)
-						y = "(nil)";
-					printf("%s%s", z, y);
-					break;
-				default:
-					x++;
-					continue;
-			}
-			z = ", ";
-			x++;
-		}
+		str = va_arg(string, char *);
+
+		if (str == NULL)
+			printf("(nil)");
+		else
+			printf("%s", str);
+		if (x != (n - 1) && separator != NULL)
+			printf("%s", separator);
+		if (x != (n - 1) separator != NULL)
+			printf("%s", separator);
 	}
 	printf("\n");
-	va_end(t);
+	va_end(string);
 }
