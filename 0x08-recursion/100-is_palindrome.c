@@ -1,10 +1,10 @@
 #include "main.h"
 
-int check_plindro(char *s, int x, int len);
+int check_palindro(char *s, int x, int len);
 int _strlen_recursion(char *s);
 
 /**
- * is_plindrome - check if a string is palindrome
+ * is_palindrome - check if a string is palindrome
  * @s: string to reverse
  *
  * Return: 1 if it is true and 0 if not
@@ -16,7 +16,7 @@ int is_palindrome(char *s)
 	{
 		return (1);
 	}
-	return (check_plindro(s, 0, _strlen_recursion(s)));
+	return (check_palindro(s, 0, _strlen_recursion(s)));
 }
 
 /**
@@ -36,7 +36,7 @@ int _strlen_recursion(char *s)
 }
 
 /**
- * check_plindro - check characters recursively
+ * check_palindro - check characters recursively
  * @s: string to be checked
  * @x: iterator
  * @len: length of string
@@ -44,15 +44,15 @@ int _strlen_recursion(char *s)
  * Return: 1 if palindrom is true or 0 if not
  */
 
-int check_plindro(char *s, int x, int len)
+int check_palindro(char *s, int x, int len)
 {
 	if (*(s + x) != *(s + len - 1))
 	{
 		return (0);
 	}
-	if (x >= (1))
+	if (x >= (len))
 	{
 		return (1);
 	}
-	return (check_plindro(s, x + 1, len - 1));
+	return (check_palindro(s, x + 1, len - 1));
 }
