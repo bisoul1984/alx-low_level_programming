@@ -64,7 +64,7 @@ int main(int argc, char *argv[])
 	}
 
 	number1 = _atoi(argv[1]);
-	number2 = _atoi(aargv[2]);
+	number2 = _atoi(argv[2]);
 
 	result = number1 * number2;
 
