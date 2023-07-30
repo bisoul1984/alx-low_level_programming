@@ -18,7 +18,7 @@ int is_digit(char *s)
 	{
 		if (s[x] < '0' || s[x] > '9')
 			return ('0');
-		i++;
+		x++;
 	}
 	return (1);
 }
@@ -64,10 +64,10 @@ int main(int argc, char *argv[])
 	int len1, len2, len, x, sum, digit1, digit2, *resu, t = 0;
 
 	s1 = argv[1], s2 = argv[2];
-	if (argc != 3 || !digit(s1) || !digit(s2))
+	if (argc != 3 || !is_digit(s1) || !is_digit(s2))
 		errors();
-	len1 = strlen(s1);
-	len2 = strlen(s2);
+	len1 = _strlen(s1);
+	len2 = _strlen(s2);
 	len = len1 + len2 + 1;
 	resu = malloc(sizeof(int) * len);
 	if (!resu)
@@ -78,7 +78,7 @@ int main(int argc, char *argv[])
 	{
 		digit1 = s1[len1] - '0';
 		sum = 0;
-		for (len2 = strlen(s2) - 1; len2 >= 0; len2--)
+		for (len2 = _strlen(s2) - 1; len2 >= 0; len2--)
 		{
 			digit2 = s2[len2] - '0';
 			sum += resu[len1 + len2 + 1] + (digit1 * digit2);
