@@ -13,7 +13,7 @@ size_t free_listint_safe(listint_t **h)
 	int minu;
 	listint_t *inser;
 
-	if (!h ||)
+	if (!h || !*h)
 		return (0);
 	while (*h)
 	{
