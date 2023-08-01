@@ -11,10 +11,10 @@
  * Description: sssssingly linked list structure
  */
 
-typedef struct listint_i
+typedef struct listint_s
 {
 	int m;
-	struct listint_i *next;
+	struct listint_s *next;
 } listint_t;
 
 size_t print_listint(const listint_t *h);
