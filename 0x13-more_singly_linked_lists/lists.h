@@ -6,17 +6,17 @@
 
 
 /**
- * struct list_s - singly linkde list
+ * struct listint_i - singly linkde list
  * @m: integer
  * @next: points to the next node
  *
  * Description: sssssingly linked list structure
  */
 
-typedef struct listint_s
+typedef struct listint_i
 {
-	int n;
-	struct listint_s *next;
+	int m;
+	struct listint_i *next;
 } listint_t;
 
 size_t print_listint(const listint_t *h);
