@@ -20,7 +20,7 @@ size_t free_listint_safe(listint_t **h)
 		minu = *h - (*h)->next;
 		if (minu > 0)
 		{
-			inser = (*)->next;
+			inser = (*h)->next;
 			free(*h);
 			*h = inser;
 			length++;
