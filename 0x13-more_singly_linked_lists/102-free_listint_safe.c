@@ -10,15 +10,15 @@
 size_t free_listint_safe(listint_t **h)
 {
 	size_t length = 0;
-	int minu;
+	int diff;
 	listint_t *inser;
 
 	if (!h || !*h)
 		return (0);
 	while (*h)
 	{
-		minu = *h - (*h)->next;
-		if (minu > 0)
+		diff = *h - (*h)->next;
+		if (diff > 0)
 		{
 			inser = (*h)->next;
 			free(*h);
