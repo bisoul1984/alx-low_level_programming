@@ -9,30 +9,30 @@
 
 size_t free_listint_safe(listint_t **h)
 {
-	size_t length = 0;
-	int diff;
+	size_t len = 0;
+	int minu;
 	listint_t *inser;
 
 	if (!h || !*h)
 		return (0);
 	while (*h)
 	{
-		diff = *h - (*h)->next;
-		if (diff > 0)
+		minu = *h - (*h)->next;
+		if (minu > 0)
 		{
 			inser = (*h)->next;
 			free(*h);
 			*h = inser;
-			length++;
+			len++;
 		}
 		else
 		{
 			free(*h);
 			*h = NULL;
-			length++;
+			len++;
 			break;
 		}
 	}
 	*h = NULL;
-	return (length);
+	return (len);
 }
