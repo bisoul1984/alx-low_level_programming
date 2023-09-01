@@ -4,7 +4,7 @@
  * flip_bits - counts the number of bits to be changed
  * get from one number to another
  * @n: first number
- * @second number
+ * @m: second numbe
  *
  * Return: number of bits to be changed
  */
