@@ -1,4 +1,4 @@
-fndef SEARCH_ALGOS_H
+#ifndef SEARCH_ALGOS_H
 #define SEARCH_ALGOS_H
 
 #include <math.h>
@@ -7,7 +7,6 @@ fndef SEARCH_ALGOS_H
 
 /**
  * struct listint_s - singly linked list
- * 
  * @n: Integer
  * @index: Index of the node in the list
  * @next: Pointer to the next node
@@ -24,10 +23,12 @@ typedef struct listint_s
 
 /**
  * struct skiplist_s - Singly linked list with an express lane
+ *
  * @n: Integer
  * @index: Index of the node in the list
  * @next: Pointer to the next node
  * @express: Pointer to the next node in the express lane
+ *
  */
 typedef struct skiplist_s
 {
